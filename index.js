@@ -41,6 +41,15 @@ streamReply.subscribe(content => {
 
 displayData.subscribe(data => {
   if(data['image/png']) {
+    if(process.env.TERM_PROGRAM === 'iTerm.app') {
+      const outputStream = process.stdout;
+      outputStream.write('\u001b]1337;');
+      outputStream.write('File=inline=1:');
+      outputStream.write(data['image/png']);
+      outputStream.write('\u0007\n');
+      return;
+    }
+
     temp.open('ick-image', (err, info) => {
       if (err) {
         console.error(err);
