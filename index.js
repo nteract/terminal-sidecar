@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 const uuid = require('uuid');
 const enchannel = require('enchannel-zmq-backend');
 

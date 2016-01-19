@@ -2,6 +2,9 @@
   "name": "terminal-sidecar",
   "version": "0.0.0",
   "description": "Jupyter sidecar in your terminal",
+  "bin": {
+    "terminal-sidecar": "index.js"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
